@@ -13,13 +13,14 @@ public class Main {
 		// TODO Auto-generated method stub
 
 		
+
 		// step 1
 		HashSet<Integer> RandamArray = new HashSet<Integer>();
-        Random randNumber = new Random();
-        while (RandamArray.size()<4) {
-        	RandamArray.add(1 + randNumber.nextInt(6));
-        }
-        System.out.println(RandamArray);
+		Random randNumber = new Random();
+		while (RandamArray.size() < 4) {
+			RandamArray.add(1 + randNumber.nextInt(6));
+		}
+		System.out.println(RandamArray);
 
 		// step 2
 		Scanner input = new Scanner(System.in);
@@ -34,16 +35,17 @@ public class Main {
 		System.out.println("your numbers are" + UserArray);
 
 		// step3
-		
 		ArrayList<String> result = new ArrayList<>();
-		for (int i=0; i<4; i++) {
-			if(RandamArray.get(i)==UserArray.get(i)) {
+		ArrayList<Integer> convertiArray = new ArrayList<>(RandamArray);
+		for (int i = 0; i < 4; i++) {
+			if (convertiArray.get(i) == UserArray.get(i)) {
 				result.add("#");
-			}else if(RandamArray.contains(UserArray.get(i))) {
+			} else if (RandamArray.contains(UserArray.get(i))) {
 				result.add("O");
 			}
 		}
 		System.out.println(result);
+
 	}
 
 }
